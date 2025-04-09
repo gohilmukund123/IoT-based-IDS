@@ -1,0 +1,24 @@
+// IoT Intrusion Detection System Workflow
+digraph {
+	A [label="Data Collection
+(Network Traffic Capture)"]
+	B [label="Data Preprocessing
+(Cleaning, Feature Extraction)"]
+	C1 [label="Signature-Based Detector
+(Decision Tree)"]
+	C2 [label="Anomaly-Based Detector
+(Keras Model)"]
+	C3 [label="CNN-Based Detector
+(Deep Learning)"]
+	D [label="Decision Aggregation
+& Alert Generation"]
+	E [label="Analysis & Reporting"]
+	A -> B [label="Raw Data"]
+	B -> C1 [label=Features]
+	B -> C2 [label=Features]
+	B -> C3 [label=Features]
+	C1 -> D
+	C2 -> D
+	C3 -> D
+	D -> E [label="Alerts/Logs"]
+}
